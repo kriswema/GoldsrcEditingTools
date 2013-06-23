@@ -1,0 +1,31 @@
+RELEASE_DIR = ./bin
+LIBRARY_DIR = ./lib
+LIBRARY_DIR_ZHLT = $(LIBRARY_DIR)/kriswema/zhlt
+
+# target: all - Default target. Does nothing.
+all:
+	@make prepare
+	@make zhlt
+	@make clean
+
+# target: help - Display callable targets.
+help: # Display callable targets.
+	@echo Usage: make [command]
+	@egrep "^[a-z]*:" [Mm]akefile
+
+prepare: # Prepare build environment
+	mkdir -pv $(RELEASE_DIR)
+	mkdir -pv $(LIBRARY_DIR)
+
+clean: # Clean build environment
+	rm -fR $(LIBRARY_DIR)
+
+purge: # Clean build environment and binaries
+	@make clean
+	rm -fR $(RELEASE_DIR)
+
+zhlt: # Build ZHLT
+	git clone git@github.com:kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
+	cd $(LIBRARY_DIR_ZHLT);\
+	make all
+	mv $(LIBRARY_DIR_ZHLT)/build/* $(RELEASE_DIR)
