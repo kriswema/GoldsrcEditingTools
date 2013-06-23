@@ -34,3 +34,6 @@ zhlt: # Build ZHLT
 	cd $(LIBRARY_DIR_ZHLT);\
 	make all
 	mv $(LIBRARY_DIR_ZHLT)/build/* $(RELEASE_DIR)
+
+install: # Move binaries to system folder (make binaries global)
+	cp $(RELEASE_DIR)/* /usr/bin/
