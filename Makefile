@@ -7,6 +7,7 @@ all:
 	@make prepare
 	@make zhlt
 	@make clean
+	@make listbin
 
 # target: help - Display callable targets.
 help: # Display callable targets.
@@ -16,6 +17,10 @@ help: # Display callable targets.
 prepare: # Prepare build environment
 	mkdir -pv $(RELEASE_DIR)
 	mkdir -pv $(LIBRARY_DIR)
+
+listbin: # List binary files
+	@echo Generated binaries:
+	@ls -CF $(RELEASE_DIR)
 
 clean: # Clean build environment
 	rm -fR $(LIBRARY_DIR)
