@@ -25,7 +25,7 @@ purge: # Clean build environment and binaries
 	rm -fR $(RELEASE_DIR)
 
 zhlt: # Build ZHLT
-	git clone git@github.com:kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
+	git clone git://github.com/kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
 	cd $(LIBRARY_DIR_ZHLT);\
 	make all
 	mv $(LIBRARY_DIR_ZHLT)/build/* $(RELEASE_DIR)
