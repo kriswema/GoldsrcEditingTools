@@ -19,3 +19,6 @@ This repository does not hold files of the above listed programmes, but will dow
 make all
 sudo make install
 ```
+
+## License ##
+This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
