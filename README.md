@@ -6,6 +6,7 @@ Master: [![Build Status](https://travis-ci.org/kriswema/GoldsrcEditingTools.png?
 Develop: [![Build Status](https://travis-ci.org/kriswema/GoldsrcEditingTools.png?branch=develop)](https://travis-ci.org/kriswema/GoldsrcEditingTools)
 
 ## Content ##
+* [HLFix] (https://github.com/kriswema/hlfix)
 * [Zoner's Half-Life Tools] (https://github.com/kriswema/zhlt-linux)
   * hlcsg
   * hlbsp

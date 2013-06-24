@@ -2,10 +2,12 @@ RELEASE_DIR = ./bin
 LIBRARY_DIR = ./lib
 LIBRARY_DIR_ZHLT = $(LIBRARY_DIR)/kriswema/zhlt
 LIBRARY_DIR_RESGEN = $(LIBRARY_DIR)/kriswema/resgen
+LIBRARY_DIR_HLFIX = $(LIBRARY_DIR)/kriswema/hlfix
 
 # target: all - Default target. Does nothing.
 all:
 	@make prepare
+	@make hlfix
 	@make zhlt
 	@make resgen
 	@make clean
@@ -30,6 +32,12 @@ clean: # Clean build environment
 purge: # Clean build environment and binaries
 	@make clean
 	rm -fR $(RELEASE_DIR)
+
+hlfix: # Build HLFix
+	git clone git://github.com/kriswema/hlfix.git $(LIBRARY_DIR_HLFIX)
+	cd $(LIBRARY_DIR_HLFIX);\
+	make all
+	mv $(LIBRARY_DIR_HLFIX)/bin/* $(RELEASE_DIR)
 
 zhlt: # Build ZHLT
 	git clone git://github.com/kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
