@@ -17,6 +17,8 @@ Develop: [![Build Status](https://travis-ci.org/kriswema/GoldsrcEditingTools.png
 ## Installation ##
 This repository does not hold files of the above listed programmes, but will download and compile them.
 ```bash
+git clone git://github.com/kriswema/GoldsrcEditingTools.git
+cd GoldsrcEditingTools
 make all
 sudo make install
 ```
