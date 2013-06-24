@@ -4,7 +4,6 @@ LIBRARY_DIR_ZHLT = $(LIBRARY_DIR)/kriswema/zhlt
 LIBRARY_DIR_RESGEN = $(LIBRARY_DIR)/kriswema/resgen
 LIBRARY_DIR_HLFIX = $(LIBRARY_DIR)/kriswema/hlfix
 
-# target: all - Default target. Does nothing.
 all:
 	@make prepare
 	@make hlfix
@@ -13,7 +12,6 @@ all:
 	@make clean
 	@make listbin
 
-# target: help - Display callable targets.
 help: # Display callable targets.
 	@echo Usage: make [command]
 	@egrep "^[a-z]*:" [Mm]akefile
