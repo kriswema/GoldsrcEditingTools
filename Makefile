@@ -19,7 +19,7 @@ help:
 	@egrep "^[a-z]*:" [Mm]akefile
 
 # Prepare build environment
-prepare:
+prepare: clean
 	mkdir -pv $(BINARIES_DIR)
 	mkdir -pv $(LIBRARY_DIR)
 
