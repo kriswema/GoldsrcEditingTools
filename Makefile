@@ -41,6 +41,7 @@ purge:
 hlfix:
 	git clone git://github.com/kriswema/hlfix.git $(LIBRARY_DIR_HLFIX)
 	cd $(LIBRARY_DIR_HLFIX);\
+	git checkout -b 0.9-beta+kriswema1;\
 	make all
 	mv $(LIBRARY_DIR_HLFIX)bin/* $(BINARIES_DIR)
 
@@ -48,6 +49,7 @@ hlfix:
 zhlt:
 	git clone git://github.com/kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
 	cd $(LIBRARY_DIR_ZHLT);\
+	git checkout -b 3.5.0-linux2;\
 	make all
 	mv $(LIBRARY_DIR_ZHLT)bin/* $(BINARIES_DIR)
 
@@ -55,6 +57,7 @@ zhlt:
 resgen:
 	git clone git://github.com/kriswema/resgen.git $(LIBRARY_DIR_RESGEN)
 	cd $(LIBRARY_DIR_RESGEN);\
+	git checkout -b 2.0.2+kriswema1;\
 	make all
 	mv $(LIBRARY_DIR_RESGEN)bin/* $(BINARIES_DIR)
 

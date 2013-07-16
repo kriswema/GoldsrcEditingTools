@@ -6,13 +6,13 @@ Master: [![Build Status](https://travis-ci.org/kriswema/GoldsrcEditingTools.png?
 Develop: [![Build Status](https://travis-ci.org/kriswema/GoldsrcEditingTools.png?branch=develop)](https://travis-ci.org/kriswema/GoldsrcEditingTools)
 
 ## Content ##
-* [HLFix] (https://github.com/kriswema/hlfix)
-* [Zoner's Half-Life Tools] (https://github.com/kriswema/zhlt-linux)
+* [HLFix] (https://github.com/kriswema/hlfix) 0.9-beta+kriswema1
+* [Zoner's Half-Life Tools] (https://github.com/kriswema/zhlt-linux) 3.5.0-linux2
   * hlcsg
   * hlbsp
   * hlvis
   * hlrad
-* [RESGen] (https://github.com/kriswema/resgen)
+* [RESGen] (https://github.com/kriswema/resgen) 2.0.2+kriswema1
 
 ## Installation ##
 This repository does not hold files of the above listed programmes, but will download and compile them.
