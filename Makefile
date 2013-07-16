@@ -38,7 +38,7 @@ purge:
 	@rm -fRv $(BINARIES_DIR)
 
 # Build HLFix
-hlfix:
+hlfix: prepare
 	git clone git://github.com/kriswema/hlfix.git $(LIBRARY_DIR_HLFIX)
 	cd $(LIBRARY_DIR_HLFIX);\
 	git checkout -b 0.9-beta+kriswema1;\
@@ -46,7 +46,7 @@ hlfix:
 	mv $(LIBRARY_DIR_HLFIX)bin/* $(BINARIES_DIR)
 
 # Build ZHLT
-zhlt:
+zhlt: prepare
 	git clone git://github.com/kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
 	cd $(LIBRARY_DIR_ZHLT);\
 	git checkout -b 3.5.0-linux2;\
@@ -54,7 +54,7 @@ zhlt:
 	mv $(LIBRARY_DIR_ZHLT)bin/* $(BINARIES_DIR)
 
 # Build RESGen
-resgen:
+resgen: prepare
 	git clone git://github.com/kriswema/resgen.git $(LIBRARY_DIR_RESGEN)
 	cd $(LIBRARY_DIR_RESGEN);\
 	git checkout -b 2.0.2+kriswema1;\
