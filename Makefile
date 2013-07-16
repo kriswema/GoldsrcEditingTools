@@ -5,13 +5,7 @@ LIBRARY_DIR_ZHLT = $(LIBRARY_DIR)kriswema/zhlt/
 LIBRARY_DIR_RESGEN = $(LIBRARY_DIR)kriswema/resgen/
 LIBRARY_DIR_HLFIX = $(LIBRARY_DIR)kriswema/hlfix/
 
-all:
-	@make prepare
-	@make hlfix
-	@make zhlt
-	@make resgen
-	@make clean
-	@make listbin
+all: hlfix zhlt resgen clean listbin
 
 # Display callable targets.
 help:
