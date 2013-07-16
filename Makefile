@@ -12,42 +12,51 @@ all:
 	@make clean
 	@make listbin
 
-help: # Display callable targets.
+# Display callable targets.
+help:
 	@echo Usage: make [command]
 	@egrep "^[a-z]*:" [Mm]akefile
 
-prepare: # Prepare build environment
+# Prepare build environment
+prepare:
 	mkdir -pv $(RELEASE_DIR)
 	mkdir -pv $(LIBRARY_DIR)
 
-listbin: # List binary files
+# List binary files
+listbin:
 	@echo Generated binaries:
 	@ls -CF $(RELEASE_DIR)
 
-clean: # Clean build environment
+# Clean build environment
+clean:
 	rm -fR $(LIBRARY_DIR)
 
-purge: # Clean build environment and binaries
+# Clean build environment and binaries
+purge:
 	@make clean
 	rm -fR $(RELEASE_DIR)
 
-hlfix: # Build HLFix
+# Build HLFix
+hlfix:
 	git clone git://github.com/kriswema/hlfix.git $(LIBRARY_DIR_HLFIX)
 	cd $(LIBRARY_DIR_HLFIX);\
 	make all
 	mv $(LIBRARY_DIR_HLFIX)/bin/* $(RELEASE_DIR)
 
-zhlt: # Build ZHLT
+# Build ZHLT
+zhlt:
 	git clone git://github.com/kriswema/zhlt-linux.git $(LIBRARY_DIR_ZHLT)
 	cd $(LIBRARY_DIR_ZHLT);\
 	make all
 	mv $(LIBRARY_DIR_ZHLT)/build/* $(RELEASE_DIR)
 
-resgen: # Build RESGen
+# Build RESGen
+resgen:
 	git clone git://github.com/kriswema/resgen.git $(LIBRARY_DIR_RESGEN)
 	cd $(LIBRARY_DIR_RESGEN);\
 	make all
 	mv $(LIBRARY_DIR_RESGEN)/bin/* $(RELEASE_DIR)
 
-install: # Move binaries to system folder (make binaries global)
+# Move binaries to system folder (make binaries global)
+install:
 	cp $(RELEASE_DIR)/* /usr/bin/
