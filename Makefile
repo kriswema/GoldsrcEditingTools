@@ -29,12 +29,12 @@ listbin:
 
 # Clean build environment
 clean:
-	rm -fR $(LIBRARY_DIR)
+	@rm -fRv $(LIBRARY_DIR)
 
 # Clean build environment and binaries
 purge:
 	@make clean
-	rm -fR $(BINARIES_DIR)
+	@rm -fRv $(BINARIES_DIR)
 
 # Build HLFix
 hlfix:
